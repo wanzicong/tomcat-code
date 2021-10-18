@@ -334,6 +334,9 @@ public class CoyoteAdapter implements Adapter {
         try {
             // Parse and set Catalina and configuration specific
             // request parameters
+            // author:wanzicong
+            // 请求的处理源码分析 根据请求找到对应的 httpServlet
+            // 根据socket 查询 container (engine host context wrapper[servlet] )
             postParseSuccess = postParseRequest(req, request, res, response);
             if (postParseSuccess) {
                 //check valves if we support async

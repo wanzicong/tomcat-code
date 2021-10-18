@@ -498,6 +498,8 @@ public class Http11Processor extends AbstractProcessor {
                 sendfileState == SendfileState.DONE && !endpoint.isPaused()) {
 
             // Parsing the request header
+            // author:wanzicong
+            // 解析request的头信息
             try {
                 if (!inputBuffer.parseRequestLine(keptAlive)) {
                     if (inputBuffer.getParsingRequestLinePhase() == -1) {
