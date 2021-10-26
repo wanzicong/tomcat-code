@@ -415,6 +415,8 @@ public class HostConfig implements LifecycleListener {
      * Deploy applications for any directories or WAR files that are found
      * in our "application root" directory.
      */
+    // author:wanzicong
+    // 部署tomcat中的web应用
     protected void deployApps() {
 
         File appBase = host.getAppBaseFile();
