@@ -4609,6 +4609,8 @@ public class StandardContext extends ContainerBase
             log.debug("Configuring application event listeners");
 
         // Instantiate the required listeners
+        // author:wanzicong
+        // 查找全部的事件监听
         String listeners[] = findApplicationListeners();
         Object results[] = new Object[listeners.length];
         boolean ok = true;
@@ -4680,6 +4682,8 @@ public class StandardContext extends ContainerBase
             return ok;
         }
 
+        //author:wanzicong
+        // Context组件中的事件发布
         ServletContextEvent event = new ServletContextEvent(getServletContext());
         ServletContextEvent tldEvent = null;
         if (noPluggabilityListeners.size() > 0) {
@@ -4696,6 +4700,8 @@ public class StandardContext extends ContainerBase
                 if (noPluggabilityListeners.contains(listener)) {
                     listener.contextInitialized(tldEvent);
                 } else {
+                    // author:wanzicong
+                    // 执行监听器中的内容<important>
                     listener.contextInitialized(event);
                 }
                 fireContainerEvent("afterContextInitialized", listener);

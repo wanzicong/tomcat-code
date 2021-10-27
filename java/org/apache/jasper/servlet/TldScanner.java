@@ -52,6 +52,8 @@ import org.xml.sax.SAXException;
 /**
  * Scans for and loads Tag Library Descriptors contained in a web application.
  */
+//author:wanzicong
+//扫描web 项目并且添加监听器
 public class TldScanner {
     private final Log log = LogFactory.getLog(TldScanner.class); // must not be static
     private static final String MSG = "org.apache.jasper.servlet.TldScanner";

@@ -303,6 +303,8 @@ public class WebXml extends XmlEncodingBase implements DocumentProperties.Encodi
     // TODO: display-name (multiple with language) is ignored
     // TODO: icon (multiple) is ignored
     private final Set<String> listeners = new LinkedHashSet<>();
+    //author:wanzicong
+    // 添加监听器listener
     public void addListener(String className) {
         listeners.add(className);
     }

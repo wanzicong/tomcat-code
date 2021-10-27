@@ -1292,6 +1292,8 @@ public class ContextConfig implements LifecycleListener {
         }
         context.setJspConfigDescriptor(webxml.getJspConfigDescriptor());
         for (String listener : webxml.getListeners()) {
+            //author:wanzicong
+            // 添加Context中的监听器
             context.addApplicationListener(listener);
         }
         for (Entry<String, String> entry :
